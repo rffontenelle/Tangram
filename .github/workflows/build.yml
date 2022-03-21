@@ -17,3 +17,7 @@ jobs:
         bundle: Tangram.flatpak
         manifest-path: re.sonny.Tangram.json
         cache-key: flatpak-builder-${{ github.sha }}
+    - uses: actions/upload-artifact@v3
+      with:
+        name: flatpak-package
+        path: Tangram.flatpak
